@@ -3585,11 +3585,16 @@ MonoBehaviour:
   oscAdress: /z
   parameter: 0
   inputValue: 0
+  mapping: 0
   mappedInputValue: 0
   inputMin: 0
   inputMax: 1
   outputMin: 7
   outputMax: -7
+  delay: 0
+  delayInSeconds: 0
+  smooth: 0
+  smoothFactor: 0
   floatEvent:
     m_PersistentCalls:
       m_Calls:
@@ -3622,11 +3627,16 @@ MonoBehaviour:
   oscAdress: /x
   parameter: 0
   inputValue: 1.14
+  mapping: 0
   mappedInputValue: 0
   inputMin: 0
   inputMax: 1
   outputMin: -7
   outputMax: 7
+  delay: 0
+  delayInSeconds: 0
+  smooth: 0
+  smoothFactor: 0
   floatEvent:
     m_PersistentCalls:
       m_Calls:
@@ -5859,11 +5869,16 @@ MonoBehaviour:
   oscAdress: 
   parameter: 0
   inputValue: 0
+  mapping: 0
   mappedInputValue: 0
   inputMin: 0
   inputMax: 1
   outputMin: 0
   outputMax: 1
+  delay: 0
+  delayInSeconds: 0
+  smooth: 0
+  smoothFactor: 0
   floatEvent:
     m_PersistentCalls:
       m_Calls: []
