@@ -2,24 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using NaughtyAttributes;
 
 public class OscReceiverStream : MonoBehaviour
 {
     public OSC osc;
     public string oscAdress;
+    [Slider(0,10)]
     public int parameter;
 
     public float inputValue;
     private float oldTestInput;
+    [ReadOnly]
+    public float mappedInputValue;
 
+    [BoxGroup("Mapping")]
     public float inputMin = 0;
+    [BoxGroup("Mapping")]
     public float inputMax = 1;
+    [BoxGroup("Mapping")]
     public float outputMin = 0;
+    [BoxGroup("Mapping")]
     public float outputMax = 1;
 
     [System.Serializable]
-    public class ColorEvent : UnityEvent<float> { }
-    public ColorEvent target;
+    public class FloatEvent : UnityEvent<float> { }
+    public FloatEvent floatEvent;
 
 
 
@@ -39,6 +47,7 @@ public class OscReceiverStream : MonoBehaviour
         if(inputValue != oldTestInput)
         {
             oldTestInput = inputValue;
+            mappedInputValue = Map(inputValue);
             Stream();
         }
     }
@@ -47,13 +56,14 @@ public class OscReceiverStream : MonoBehaviour
     {
         
         inputValue = message.GetFloat(parameter);
+        mappedInputValue = Map(inputValue);
         Stream();
         
     }
 
     private void Stream()
     {
-        target.Invoke(Map(inputValue));
+        floatEvent.Invoke(mappedInputValue);
     }
 
     public float Map(float value)

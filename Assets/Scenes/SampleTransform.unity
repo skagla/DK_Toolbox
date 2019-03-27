@@ -523,7 +523,12 @@ MonoBehaviour:
   oscAdress: 
   parameter: 0
   inputValue: 0
-  target:
+  mappedInputValue: 0
+  inputMin: 0
+  inputMax: 1
+  outputMin: 0
+  outputMax: 360
+  floatEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1008281685}
@@ -537,7 +542,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: OscReceiverStream+ColorEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    m_TypeName: OscReceiverStream+FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!1 &2100130637
 GameObject:
@@ -660,21 +665,15 @@ MonoBehaviour:
   oscAdress: 
   parameter: 0
   inputValue: 0
-  target:
+  mappedInputValue: 0
+  inputMin: 0
+  inputMax: 1
+  outputMin: 0
+  outputMax: 1
+  floatEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2100130638}
-        m_MethodName: SetUniformScale
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: OscReceiverStream+ColorEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      m_Calls: []
+    m_TypeName: OscReceiverStream+FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!1 &2123346869
 GameObject:
@@ -797,19 +796,13 @@ MonoBehaviour:
   oscAdress: 
   parameter: 0
   inputValue: 0
-  target:
+  mappedInputValue: 0
+  inputMin: 0
+  inputMax: 1
+  outputMin: 0
+  outputMax: 1
+  floatEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2123346874}
-        m_MethodName: SetPositionY
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: OscReceiverStream+ColorEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      m_Calls: []
+    m_TypeName: OscReceiverStream+FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null

@@ -5,8 +5,9 @@ using UnityEngine;
 public class SwitchSpawnDespawn : MonoBehaviour
 {
     public GameObject objectToSpawn;
-
     List<GameObject> spawnedObjects = new List<GameObject>();
+
+
 
     public void TriggerSpawn()
     {

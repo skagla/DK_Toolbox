@@ -6,15 +6,18 @@ public class SetRotation : MonoBehaviour
 {
     public void SetRotationX(float x)
     {
-        Quaternion rotation = transform.rotation;
-        rotation = Quaternion.Euler(new Vector3(x, rotation.eulerAngles.y, rotation.eulerAngles.z));
-        transform.rotation = rotation;
+         Quaternion rotation = transform.rotation;
+         rotation *= Quaternion.Euler(new Vector3(x, 0, 0));
+         transform.rotation = rotation;
+       
+       // transform.rotation = Quaternion.AngleAxis(x, transform.right);
     }
 
     public void SetRotationY(float y)
     {
         Quaternion rotation = transform.rotation;
-        rotation = Quaternion.Euler(new Vector3(rotation.eulerAngles.x, y, rotation.eulerAngles.z));
+        //rotation = Quaternion.Euler(new Vector3(rotation.eulerAngles.x, y, rotation.eulerAngles.z));
+        rotation *= Quaternion.Euler(new Vector3(0, y, 0));
         transform.rotation = rotation;
     }
 
